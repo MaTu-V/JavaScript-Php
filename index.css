@@ -1,0 +1,999 @@
+body{
+    margin: 0;
+    padding: 0;
+    background:none;
+    font-size: 14px;
+    min-width: 1319px;
+    color: #333;
+
+}
+ul,dl,dd,h2{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+div#header_bg{
+    width: 100%;
+    background: url("images/header_bg.png") repeat-x;
+}
+div#header{
+    width: 100%;
+    height: 30px;
+    margin: 0 auto;
+}
+div#header .logo{
+    width:100px;
+    height: 30px;
+    float: left;
+}
+div#header .logo img{
+     display: block;
+}
+div#header .member{
+    background:url("images/arrow.png") no-repeat 60px 6px;
+    width: 100px;
+    height: 30px;
+    float: right;
+    margin: 5px 100px auto 0;
+    cursor: pointer;
+    position: relative;
+}
+div#header .member_ul{
+    display: none;
+    position: absolute;
+    top:25px;
+    left: -20px;
+    background: rgba(244,244,244,0.9);
+    width: 100px;
+    height: 0;
+    line-height: 20px;
+    border: 1px solid #999;
+    border-top:none;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    overflow: hidden;
+}
+div#header ul li{
+    height: 25px;
+    line-height: 25px;
+    text-indent: 35px;
+}
+div#header ul li a{
+    display: block;
+    text-decoration: none;
+    color: #333;
+    background: url("images/arrow3.gif") no-repeat 10px;
+}
+div#header ul li a:hover{
+    background: #fff url("images/arrow4.gif") no-repeat 10px;
+}
+div#header .login,div#header .reg,div#header .info{
+    float: right;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+}
+div#header .info{
+    display: none;
+    margin-right: 10px;
+}
+
+div#reg {
+    display: none;
+    background: white;
+    width: 600px;
+    height: 550px;
+    border: 1px solid #999999;
+    position: absolute;
+    z-index: 9999;
+}
+div#reg h2{
+    text-align: center;
+    height: 40px;
+    letter-spacing: 4px;
+    color: #666;
+    background: url("images/login_header.png") repeat-x;
+    margin: 0;
+    padding: 0;
+    line-height: 40px;
+    cursor: move;
+}
+div#reg h2 img{
+    float: right;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+div#reg  dl{
+    font-size: 14px;
+    color: #666;
+    margin: 20px auto;
+    padding: 0 0 0 50px;
+    position: relative;
+}
+div#reg  dd{
+    height: 30px;
+    padding: 5px;
+}
+div#reg dl dd  label{
+    display: inline-block;
+    padding: 0 auto auto 40px;
+}
+div#reg  dl dd input{
+    display: inline-block;
+    position: absolute;
+    left: 130px;
+    width: 200px;
+    height: 20px;
+    border: 1px solid gray;
+    background: #fff;
+    font-size: 14px;
+}
+div#reg  dl dd textarea{
+    position: absolute;
+    left: 130px;
+    width: 380px;
+    height: 100px;
+    border: 1px solid gray;
+    resize: none;
+}
+div#reg  dl dd select{
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 0 30px;
+}
+div#reg  dl dd  #regQuestion{
+    margin: 0 0 0 0;
+    position: absolute;
+    left: 130px;
+    width: 204px;
+    height: 20px;
+    color: #666;
+    font-size: 14px;
+}
+div#reg  dl dd  .submit{
+    margin: -10px 0;
+    width: 143px;
+    height: 33px;
+    background: url("images/reg.png") no-repeat left;
+    border: none;
+    cursor: pointer;
+}
+div#reg  dl dd span.info,div#reg  dl dd span.error,div#reg  dl dd span.succ{
+    display: none;
+    position: absolute;
+    padding:7px;
+    text-indent: 30px;
+    left: 335px;
+    color:#333;
+    width: 200px;
+    height: 32px;
+    font-weight: bold;
+    font-size: 11px;
+    background: url("images/reg_info.png") no-repeat;
+}
+div#reg  dl dd span.info_user{
+    background: url("images/reg_info2.png") no-repeat;
+    width: 200px;
+    height: 50px;
+    letter-spacing: 2px;
+}
+div#reg  dl dd span.error_user{
+    background: url("images/reg_error.png") no-repeat;
+}
+div#reg  dl dd span.succ_user{
+    margin: 5px 0 0 10px;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    background: url("images/reg_succ.png") no-repeat;
+}
+div#reg  dl dd span.loading{
+    display: none;
+    position: absolute;
+    left: 335px;
+    font-size: 11px;
+    background: url("images/loading2.gif")  no-repeat 7px;
+    text-indent: 30px;
+    padding: 5px 0 0 0;
+}
+div#reg  dl dd span.info_pass{
+    position: absolute;
+    top:5px;
+    letter-spacing: 0;
+    background: url("images/reg_info3.png") no-repeat;
+    width: 260px;
+    height: 106px;
+    line-height: 10px;
+}
+div#reg  dl dd span.info_pass p{
+    color: #666;
+}
+div#reg  dl dd span.info_pass strong{
+    font-size: large;
+    color: #ccc;
+}
+div#reg  dl dd span.error_pass{
+    background: url("images/reg_error.png") no-repeat;
+}
+div#reg  dl dd span.succ_pass{
+    margin: 5px 0 0 10px;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    background: url("images/reg_succ.png") no-repeat;
+}
+
+div#reg  dl dd span.info_checkPass{
+    width: 200px;
+    height: 50px;
+    letter-spacing: 2px;
+}
+div#reg  dl dd span.error_checkPass{
+
+    background: url("images/reg_error.png") no-repeat;
+}
+div#reg  dl dd span.succ_checkPass{
+    margin: 5px 0 0 10px;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    background: url("images/reg_succ.png") no-repeat;
+}
+
+div#reg  dl dd span.error_ques{
+    margin-top: -5px;
+    background: url("images/reg_error.png") no-repeat;
+}
+div#reg  dl dd span.info_ans{
+    width: 200px;
+    height: 50px;
+    letter-spacing: 2px;
+}
+div#reg  dl dd span.error_ans{
+    background: url("images/reg_error.png") no-repeat;
+}
+div#reg  dl dd span.succ_ans{
+    margin: 5px 0 0 10px;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    background: url("images/reg_succ.png") no-repeat;
+}
+div#reg  dl dd span.info_email{
+    width: 200px;
+    height: 50px;
+    letter-spacing: 2px;
+}
+div#reg  dl dd span.error_email{
+    background: url("images/reg_error.png") no-repeat;
+}
+div#reg  dl dd span.succ_email{
+    margin: 5px 0 0 10px;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    background: url("images/reg_succ.png") no-repeat;
+}
+div#reg dl dd ul.all_email{
+    display: none;
+    position: absolute;
+    left: 130px;
+    margin-top: 4px;
+    width: 200px;
+    height: 147px;
+    background: white;
+    z-index: 2;
+    border: 1px solid gray;
+}
+div#reg dl dd ul.all_email li{
+    height: 20px;
+    line-height: 20px;
+    color: #999;
+    padding: 0 5px 0 8px;
+    border-bottom: 1px solid #e5edf2;
+    cursor: pointer;
+}
+div#reg dl dd  span.error_birthday{
+    z-index: 1;
+    background: url("images/reg_error.png") no-repeat;
+}
+
+div#blog {
+    display: none;
+    background: white;
+    width: 580px;
+    height: 310px;
+    border: 1px solid #999999;
+    position: absolute;
+    z-index: 9999;
+}
+div#blog h2{
+    text-align: center;
+    height: 40px;
+    letter-spacing: 4px;
+    color: #666;
+    background: url("images/login_header.png") repeat-x;
+    margin: 0;
+    padding: 0;
+    line-height: 40px;
+    cursor: move;
+}
+div#blog h2 img{
+    float: right;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+div#blog .info{
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: maroon;
+    font-weight: bold;
+    margin: 5px 0 5px 0;
+}
+div#blog  dl{
+    font-size: 14px;
+    color: #666;
+    width: auto;
+}
+div#blog  dd{
+    height: 50px;
+    position: relative;
+}
+div#blog dl dd label{
+    position: absolute;
+    margin: 10px 0 0 80px;
+    font-size: 16px;
+}
+div#blog  dl dd input{
+    display: inline-block;
+    position: absolute;
+    left: 150px;
+    width: 302px;
+    height: 20px;
+    background: #fff;
+    font-size: 14px;
+    margin: 10px auto;
+}
+div#blog  dl dd textarea{
+    display: inline-block;
+    position: absolute;
+    left: 150px;
+    width: 300px;
+    height: 100px;
+    background: #fff;
+    font-size: 14px;
+    margin: 10px auto;
+    resize: none;
+}
+div#blog dl dd input.submit{
+    position: absolute;
+    top:70px;
+    width:107px;
+    height:33px;
+    background:url(images/blog_button.png) no-repeat left;
+    border:none;
+    cursor:pointer;
+}
+
+div#skin {
+    display: none;
+    background: white;
+    width: 650px;
+    height: 360px;
+    border: 1px solid #999999;
+    position: absolute;
+    z-index: 9999;
+}
+div#skin h2{
+    text-align: center;
+    height: 40px;
+    letter-spacing: 4px;
+    color: #666;
+    background: url("images/login_header.png") repeat-x;
+    margin: 0;
+    padding: 0;
+    line-height: 40px;
+    cursor: move;
+}
+div#skin h2 img{
+    float: right;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+div#skin dl{
+    float: left;
+    padding:12px 0 0 12px ;
+}
+div#skin dl dt{
+    display: block;
+    cursor: pointer;
+}
+div#skin dl dd{
+    text-align: center;
+    font-size: 12px;
+    padding: 5px 0 0 0;
+    letter-spacing: 1px;
+    color: gray;
+}
+div#skin .skin_bg {
+    position:relative;
+}
+div#skin .skin_bg span.loading {
+    position:absolute;
+    top:140px;
+    left:270px;
+    width:100px;
+    height:20px;
+    background:url("images/loading4.gif") no-repeat;
+}
+
+
+div#loginPage {
+    display: none;
+    background:white;
+    width: 450px;
+    height: 250px;
+    border: 1px solid #999999;
+    position: absolute;
+    z-index: 9999;
+}
+div#loginPage h2{
+    text-align: center;
+    height: 40px;
+    letter-spacing: 4px;
+    color: #666;
+    background: url("images/login_header.png") repeat-x;
+    margin: 0;
+    padding: 0;
+    line-height: 40px;
+    cursor: move;
+}
+div#loginPage h2 img{
+    float: right;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+div#loginPage .info{
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: maroon;
+    font-weight: bold;
+}
+div#loginPage label{
+    padding: 20px;
+    margin: 0 auto auto 40px;
+    color: #666;
+    font-size: 14px;
+}
+div#loginPage  input.loginPassword,input.loginText{
+    margin: 15px 0 15px 0;
+    width: 250px;
+    height: 25px;
+    border: 1px solid gray;
+}
+div#loginPage .button{
+    text-align: center;
+    padding: 0 5px 0  5px;
+}
+div#loginPage  input.submit{
+    background: url("images/login_button.png") no-repeat left;
+    width: 107px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+div#loginPage .other{
+     float: right;
+     color: #666;
+     cursor: pointer;
+     font-size: 12px;
+}
+div#loginPage .other span:hover{
+    color:black;
+}
+
+div#screen{
+    background: #000;
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    filter:alpha(opacity=0);     /*IE 下的透明色设置*/
+    opacity: 0;           /*其他浏览器*/
+    z-index: 9998;
+}
+div#share {
+    width:210px;
+    height:315px;
+    border:1px solid #ccc;
+    position:absolute;
+    top: 0;
+    left:-211px;
+    background:#fff;
+}
+div#share h2 {
+    height:30px;
+    line-height:30px;
+    background:#eee;
+    padding:0;
+    margin:0;
+    font-size:14px;
+    color:#666;
+    text-indent:10px;
+}
+div#share ul {
+    height:254px;
+    padding:3px 0 2px 5px;
+}
+div#share ul li {
+    width:96px;
+    height:28px;
+    float:left;
+    padding:2px;
+}
+div#share ul li a {
+    display: block;
+    width: 95px;
+    height: 26px;
+    line-height: 26px;
+    text-decoration: none;
+    color: #666;
+    background-image: url("images/share_bg.png");
+    background-repeat: no-repeat;
+    text-indent: 30px;
+}
+div#share ul li a.a {
+    background-position:5px 4px;
+}
+div#share ul li a.b {
+    background-position:5px -26px;
+}
+div#share ul li a.c {
+    background-position:5px -56px;
+}
+div#share ul li a.d {
+    background-position:5px -86px;
+}
+div#share ul li a.e {
+    background-position:5px -116px;
+}
+div#share ul li a.f {
+    background-position:5px -146px;
+}
+div#share ul li a.g {
+    background-position:5px -176px;
+}
+div#share ul li a.h {
+    background-position:5px -206px;
+}
+div#share ul li a.i {
+    background-position:5px -236px;
+}
+div#share ul li a.j {
+    background-position:5px -266px;
+}
+div#share ul li a.k {
+    background-position:5px -296px;
+}
+div#share ul li a.l {
+    background-position:5px -326px;
+}
+div#share ul li a.n {
+    background-position:5px -356px;
+}
+div#share ul li a.m {
+    background-position:5px -386px;
+}
+div#share ul li a.o {
+    background-position:5px -416px;
+}
+div#share ul li a.p {
+    background-position:5px -446px;
+}
+div#share ul li a:hover {
+    opacity:0.7;
+    filter:alpha(opacity=70);
+    background-color:#eee;
+}
+div#share .share_footer {
+    height:26px;
+    background:#eee;
+    position:relative;
+}
+div#share .share_footer a {
+    position:absolute;
+    top:5px;
+    left:140px;
+    padding:0 0 0 13px;
+    background:#eee url("images/share_bg.png") no-repeat 0 -473px;
+    text-decoration:none;
+    color:#666;
+}
+div#share .share_footer a:hover {
+    color:#06f;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+}
+
+div#share .share_footer span {
+    display:block;
+    width:24px;
+    height:88px;
+    position:absolute;
+    top:-230px;
+    left:210px;
+    background:url("images/share.png") no-repeat;
+    cursor:pointer;
+}
+div#nav {
+    width: 465px;
+    height: 52px;
+    background:url("images/nav_bg.png") no-repeat;
+    margin: 50px auto 0 auto;
+    position: relative;
+    cursor: pointer;
+}
+div#nav ul{
+    height: 52px;
+    cursor: pointer;
+}
+div#nav ul li{
+    float: left;
+    width: 85px;
+    height: 52px;
+    line-height: 52px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+}
+div#nav ul.black{
+    position: absolute;
+    left: 20px;
+    color: #333;
+    z-index: 1;
+}
+
+div#nav .nav_bg  ul.white{
+    width: 465px;
+    position: absolute;
+    left: 0;
+    color:white;
+    z-index: 3;
+}
+
+div#nav ul.about{
+    position: absolute;
+    background: red;
+    color: #ff6600;
+    left: 20px;
+    z-index: 4;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+div#nav .nav_bg{
+    width: 85px;
+    height: 52px;
+    background: url("images/nav_over.png") no-repeat 0 11px;
+    position: absolute;
+    left: 20px;
+    cursor: pointer;
+    z-index: 2;
+    overflow: hidden;
+}
+div#main{
+    width: 900px;
+    height: 570px;
+    margin: 50px auto;
+    position: relative;
+}
+div#main .sidebar{
+    display: block;
+    width: 250px;
+    height: 570px;
+    float: left;
+}
+div#main .sidebar h2{
+    width: 248px;
+    height: 30px;
+    line-height: 30px;
+    text-indent: 10px;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    background: url("images/side_h.png");
+    border-bottom: none;
+    cursor: pointer;
+}
+div#main .sidebar ul{
+    height: 150px;
+    border: 1px solid #ccc;
+    margin: 0 0 10px 0;
+    overflow: hidden;
+    background: #fff;
+}
+div#main .sidebar ul li{
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    background: url("images/arrow4.gif") no-repeat 12px 45%;
+    text-indent: 30px;
+}
+div#main .sidebar ul li a{
+    text-decoration: none;
+    color: #333;
+}
+div#main .index{
+    width: 630px;
+    height: 570px;
+    float: right;
+    position: relative;
+}
+div#main .index .loading{
+    display: none;
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    left: 260px;
+    top: 260px;
+    background: url("images/loading4.gif") no-repeat left;
+}
+div#main .index .content{
+    background: #fff;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+div#main .index .content h2{
+    width: 628px;
+    height: 30px;
+    line-height: 30px;
+    text-indent: 10px;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    background: url("images/side_h.png");
+    border-bottom: none;
+    cursor: pointer;
+}
+div#main .index .content h2 em{
+    float: right;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 12px;
+    padding: 0 10px 0 0;
+    color: gray;
+}
+div#main .index .content p{
+    height: 150px;
+    line-height: 250%;
+    border: 1px solid #ccc;
+    margin: 0 0 10px 0;
+    overflow: hidden;
+    text-indent: 24px;
+}
+div#main .banner{
+    width: 900px;
+    height: 150px;
+    float: left;
+    margin-top: 10px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+div#main .banner img{
+    display: none;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 1;
+}
+div#main .banner ul{
+    position: absolute;
+    top:124px;
+    left: 420px;
+    z-index: 4;
+}
+div#main .banner li{
+    float: left;
+    padding: 0 5px 5px 5px;
+    color: #999;
+    font-size: 16px;
+    cursor: pointer;
+}
+div#main .banner span{
+    width: 900px;
+    height: 25px;
+    position: absolute;
+    top:125px;
+    left: 0;
+    background: black;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+    z-index: 3;
+}
+div#main .banner strong{
+    position: absolute;
+    top:125px;
+    left: 10px;
+    width: 130px;
+    height: 25px;
+    color: #ff6600;
+    z-index: 2;
+}
+
+div#main .photo{
+    width: 900px;
+    float: left;
+    margin-top: 10px;
+    background: #fff;
+}
+div#main .photo dl{
+    width: 225px;
+    height: 290px;
+    float: left;
+}
+div#main .photo dl dt{
+    width: 220px;
+    height: 250px;
+    margin: 5px 12px 5px 12px;
+    background: url("images/wait_load.jpg") no-repeat;
+}
+div#main .photo dl dd{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+div#main .photo dl img{
+    display: block;
+    cursor: pointer;
+}
+
+div#photo_big{
+    display: none;
+    background: #1d050c;
+    width: 620px;
+    height: 511px;
+    border: 1px solid #999999;
+    position: absolute;
+    z-index: 9999;
+}
+div#photo_big h2{
+    text-align: center;
+    height: 40px;
+    letter-spacing: 4px;
+    color: #666;
+    background: url("images/login_header.png") repeat-x;
+    margin:0;
+    padding:0;
+    line-height: 40px;
+    cursor: move;
+}
+div#photo_big h2 img{
+    float: right;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+div#photo_big img{
+    display: block;
+    margin: 10px auto;
+    position: relative;
+    top: 190px;
+}
+div#photo_big .big strong{
+    display: block;
+    width: 60px;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    background: #000;
+    color: lightcyan;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    font-size: 70px;
+    cursor: pointer;
+    position: absolute;
+}
+div#photo_big .big strong.sl{
+    top:185px;
+    left:10px;
+}
+div#photo_big .big strong.sr{
+    top:185px;
+    left:550px;
+}
+div#photo_big .big span{
+    display: block;
+    width: 310px;
+    height: 471px;
+    background:#000;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+    position: absolute;
+    top:40px;
+}
+div#photo_big .big span.left{
+    left: 0;
+}
+div#photo_big .big span.right{
+    left: 310px;
+}
+div#photo_big .big .index{
+    position: absolute;
+    top: 470px;
+    width: 620px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: whitesmoke;
+    font-weight: normal;
+}
+div#loading{
+    display: none;
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: url("images/login_header.png");
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    z-index: 10000;
+}
+div#loading p{
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+    background: url("images/loading3.gif") no-repeat 20px center;
+}
+
+div#success{
+    display: none;
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background: url("images/login_header.png");
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    z-index: 10000;
+}
+div#success p{
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+    background: url("images/success.gif") no-repeat 20px center;
+}
+div#footer{
+    clear: both;
+    width: 900px;
+    margin-bottom: 10px;
+}
+div#footer p{
+    text-align: center;
+    padding: 10px 0 0 0;
+}
+
+
+
+
+
+
